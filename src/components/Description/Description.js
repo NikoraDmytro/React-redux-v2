@@ -25,7 +25,7 @@ export const Description = () => {
           </Link>
         </article>
       </div>
-      <div className="FacilitiesContainer">
+      <div className="facilities">
         <AllFacilities />
       </div>
     </div>
