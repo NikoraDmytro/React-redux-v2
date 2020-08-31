@@ -1,0 +1,64 @@
+@import "../../../Variables/variables.scss";
+
+label {
+  width: fit-content;
+}
+
+input,
+.submitButton {
+  width: 100%;
+  height: 3em;
+  border-radius: 10px;
+  font-size: 0.8125em;
+}
+
+.submitButton {
+  border: none;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  background: $LightBlueButton-color;
+  box-shadow: $button-shadow;
+  font-weight: 600;
+}
+
+input {
+  outline: none;
+  font-weight: 300;
+  margin-bottom: 1.2em;
+  margin-top: 0.75em;
+  background: #ffffff;
+  border: 1px solid #bfd2e2;
+  padding: 5%;
+}
+input[type="checkbox"] {
+  width: 1.05em;
+  height: 1.05em;
+  margin-bottom: 10.2%;
+  + span {
+    margin-left: 0.6875em;
+    font-weight: 300;
+    font-size: 14px;
+  }
+}
+
+.EnterTheCabinet {
+  width: 100%;
+  text-align: center;
+  padding: 1.52% 31% 2.54% 31%;
+  color: #ffffff;
+  background: #70beff;
+  box-shadow: 2px 2px 4px rgba(26, 63, 156, 0.2);
+  font-weight: 600;
+  border-radius: 10px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.error {
+  font-size: 1em;
+  color: red;
+  width: 400px;
+  margin-top: 0.25rem;
+}

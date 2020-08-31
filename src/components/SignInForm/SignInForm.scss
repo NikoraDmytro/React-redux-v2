@@ -1,0 +1,43 @@
+@import "../../Variables/variables.scss";
+
+.SignInForm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 47.8%;
+  margin-top: 13%;
+  height: 100vh;
+  color: $mainText-color;
+}
+
+Form {
+  margin: 0 22% 0 14%;
+  h2 {
+    font-weight: bold;
+    width: fit-content;
+    margin-bottom: 10.2%;
+  }
+  h4 {
+    font-weight: normal;
+    margin-bottom: 11.7%;
+  }
+  .LinksForHelp {
+    margin-top: 5.34%;
+    width: 100%;
+    text-align: center;
+    a {
+      color: #1a3f9c;
+      font-weight: 600;
+      font-size: 1em;
+      &:last-of-type {
+        margin-top: 1em;
+        display: block;
+      }
+    }
+    h5 {
+      display: inline;
+      margin-right: 0.8125em;
+      font-weight: 300;
+    }
+  }
+}
