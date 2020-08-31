@@ -9,5 +9,6 @@ export const LandingPage = () => (
       logoTheme="white"
       buttonProps={{ content: "Войти", link: "/SignIn", type: "normal" }}
     />
+    <Description />
   </main>
 );
