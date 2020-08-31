@@ -9,7 +9,7 @@ import {
   MySubmitButton,
 } from "./MyInputs/MyInputs.js";
 
-import { Presentation } from "./Presentetion.js";
+import { Presentation } from "./Presentation.js";
 import "./SignInForm.scss";
 
 export const SignInForm = () => {
