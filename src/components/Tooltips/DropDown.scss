@@ -1,0 +1,22 @@
+@import "../../shared/variables.scss";
+
+[class*="TooltipContainer"] {
+  width: 18.5%;
+  height: fit-content;
+  .VisiblePart {
+    width: 100%;
+    height: 4.5vh;
+    overflow: hidden;
+    margin: 0;
+  }
+  .TooltipText {
+    height: 13vh;
+  }
+  &[class*="blue"] {
+    color: white;
+    background: rgba(144, 196, 239, 0.65);
+    &[class*="active"] {
+      background: $LightBlueButton-color;
+    }
+  }
+}

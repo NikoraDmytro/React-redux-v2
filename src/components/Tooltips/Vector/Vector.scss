@@ -1,0 +1,12 @@
+[class*="Vector"] {
+  width: 7%;
+  height: 30%;
+  cursor: pointer;
+  position: absolute;
+  right: 10%;
+  &[class*="Top"] {
+    height: 10%;
+    transform: rotate(180deg);
+  }
+  transition-duration: 0.25s;
+}
