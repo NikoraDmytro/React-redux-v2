@@ -7,7 +7,7 @@ export const LandingPage = () => (
     <Header
       backgroundTheme="gradient-blue"
       logoTheme="white"
-      buttonProps={{ content: "Войти", link: "/SignIn", type: "normal" }}
+      buttonProps={{ content: "Войти", link: "/SignIn", type: "button" }}
     />
     <Description />
   </main>

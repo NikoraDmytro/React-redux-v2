@@ -1,4 +1,4 @@
-@import "../../Variables/variables.scss";
+@import "../../shared/variables.scss";
 
 .SignInForm {
   position: absolute;
@@ -6,7 +6,7 @@
   left: 0;
   width: 47.8%;
   margin-top: 13%;
-  height: 100vh;
+  height: 80%;
   color: $mainText-color;
 }
 
