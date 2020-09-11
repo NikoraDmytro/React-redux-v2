@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 
 const CornerButton = (props) => (
   <Link to={props.link} className={`cornerButton${props.type}`}>
-    <p>{props.content}</p>
+    {typeof props.content === "object" ? (
+      <img src={props.content.src} alt={props.content.alt} />
+    ) : (
+      <p>{props.content}</p>
+    )}
   </Link>
 );
 
@@ -15,6 +19,7 @@ export const Header = (props) => {
   return (
     <header className={`Header-${theme}`}>
       <h1 className={`Logo-${logoTheme}`}>S2</h1>
+      <div className={`Content`}>{props.content}</div>
       <CornerButton
         content={buttonProps.content}
         link={buttonProps.link}

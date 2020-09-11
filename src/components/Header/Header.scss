@@ -1,11 +1,11 @@
-@import "../../Variables/variables.scss";
+@import "../../shared/variables.scss";
 
 [class*="Header"] {
   width: 100%;
-  height: 6em;
+  height: 9vh;
   display: flex;
   align-items: center;
-  padding: 0 4.1875em;
+  padding: 0 3.5%;
   &[class*="gradient-blue"] {
     background: $gradient-blue;
     box-shadow: $blueHeader-shadow;
@@ -14,18 +14,28 @@
     background: white;
     box-shadow: $whiteHeader-shadow;
   }
+  .Content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    > * {
+      position: relative;
+      top: 25%;
+      margin-left: 4.5%;
+    }
+  }
 }
 
 [class*="cornerButton"] {
   font-size: 0.875em;
-  text-decoration: none;
-  position: absolute;
   font-weight: normal;
   text-align: center;
+  text-decoration: none;
+  position: absolute;
+  color: white;
   right: 5%;
-  color: #ffffff;
   z-index: 2;
-  &[class*="normal"] {
+  &[class*="button"] {
     padding: 0.4285em 1.9em 0.785em 1.9em;
     border: 1px solid #ffffff;
     border-radius: 26px;
@@ -34,14 +44,27 @@
     padding-bottom: 0.3em;
     border-bottom: 1px solid #ffffff;
   }
+  &[class*="img"] {
+    width: 3%;
+    height: auto;
+    img {
+      width: 100%;
+      height: 100%;
+      color: black;
+    }
+  }
 }
 
-[class*="Logo"] {
+[class^="Logo"] {
   font-weight: bold;
+  margin-right: 3.5%;
   &[class*="white"] {
     color: white;
   }
   &[class*="blue"] {
     color: $blueLogo-color;
+  }
+  &[class*="none"] {
+    visibility: hidden;
   }
 }
