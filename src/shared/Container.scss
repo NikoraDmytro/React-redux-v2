@@ -1,0 +1,14 @@
+[class*="Rounded"] {
+  box-shadow: 2px 2px 4px rgba(26, 63, 156, 0.2);
+  border-radius: 10px;
+  > * {
+    display: flex;
+    align-items: center;
+  }
+  padding: 0 0.75%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
