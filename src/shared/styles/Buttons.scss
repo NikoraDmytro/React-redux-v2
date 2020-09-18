@@ -1,0 +1,21 @@
+@import "./variables.scss";
+
+.MakeOrderButton {
+  float: right;
+  width: 13.5vw;
+  box-shadow: $button-shadow;
+  background: $gradient-blue;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.CancelButton {
+  @extend .MakeOrderButton;
+  background: white;
+  color: #2f3648;
+}
+
+.RepeatOrderButton {
+  @extend .MakeOrderButton;
+  width: 21vh;
+}

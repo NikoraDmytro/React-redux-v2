@@ -1,0 +1,62 @@
+.MakeOrder {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: #ffffff;
+  box-shadow: 10px 0px 10px rgba(26, 63, 156, 0.23);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  > * {
+    margin-right: 3.05%;
+  }
+  [class*="Statistic"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    height: 100%;
+    font-weight: 600;
+    line-height: 16px;
+    font-size: 12px;
+    color: #2f3648;
+    &[class*="Values"] {
+      font-weight: normal;
+    }
+    span:nth-child(1) {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+.ConfirmPanel {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(63, 78, 117, 0.19);
+  padding: 0;
+  & {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ConfirmBox {
+    position: absolute;
+    padding: 5% 2.5%;
+    width: 45%;
+    height: fit-content;
+    background-color: #ffffff;
+  }
+  .Close {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+  }
+}

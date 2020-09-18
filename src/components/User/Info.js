@@ -1,4 +1,4 @@
-import ManagerIcon from "./icon.jpg";
+import ManagerIcon from "./UserIcon/icon.jpg";
 
 export const UserInfo = {
   nickname: "DODO",

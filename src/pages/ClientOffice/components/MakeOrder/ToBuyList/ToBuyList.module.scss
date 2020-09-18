@@ -1,0 +1,51 @@
+.Label {
+  font-weight: 600;
+  text-align: center;
+  color: #2f3648;
+  width: 100%;
+  margin-bottom: 8%;
+  font-size: 14px;
+}
+
+.ToBuyList {
+  background: #ffffff;
+  box-shadow: 0px 0px 6px rgba(26, 63, 156, 0.2);
+  margin-bottom: 4%;
+  height: fit-content;
+  max-height: 60%;
+  width: 100%;
+  overflow: scroll;
+  font-size: 12px;
+  line-height: 16px;
+  tr:nth-last-child(1) {
+    td {
+      border: none;
+    }
+  }
+  th,
+  td {
+    border-bottom: 1px solid #e5ecff;
+    height: 7.7vh;
+    color: #2f3648;
+    text-align: center;
+  }
+  td {
+    font-weight: normal;
+    &:nth-child(1) {
+      width: 37%;
+    }
+    &:nth-child(2) {
+      width: 25%;
+    }
+    &:nth-child(3) {
+      width: 38%;
+    }
+  }
+  th {
+    font-weight: 600;
+  }
+}
+
+.Conclusion {
+  margin-bottom: 8.2%;
+}

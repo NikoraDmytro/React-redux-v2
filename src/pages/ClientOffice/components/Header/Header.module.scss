@@ -1,0 +1,31 @@
+.header {
+  padding: 0 5%;
+  &,
+  > * {
+    display: flex;
+    align-items: center;
+  }
+  height: 15%;
+  width: 100%;
+}
+
+.Rounded {
+  width: 17%;
+  height: 34%;
+  box-shadow: none;
+  margin-left: 1.6%;
+}
+
+.DropDown {
+  border: 1px solid #bfd2e2;
+}
+
+.FindProduct {
+  background-color: #f2f9ff;
+  color: rgba(26, 63, 156, 0.53);
+  img {
+    width: 10%;
+    height: 60%;
+    margin: 0 12%;
+  }
+}

@@ -1,0 +1,58 @@
+.ClientOffice table {
+  height: 81%;
+  width: 100%;
+  th,
+  td {
+    vertical-align: middle;
+    line-height: 16px;
+    border-bottom: 1px solid #e5ecff;
+    text-align: center;
+  }
+  th {
+    height: 7vh;
+    color: #535e7c;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  td {
+    height: 8vh;
+    font-weight: normal;
+    font-size: 11px;
+    color: #2f3648;
+  }
+  .checkbox {
+    width: 5.5%;
+  }
+  .barcode {
+    width: 9.75%;
+  }
+  .vendorCode {
+    width: 13.18%;
+  }
+  .tooltip {
+    width: 18.51%;
+  }
+  .boxSize {
+    width: 11%;
+  }
+  .recommendedRetailPrice {
+    width: 11.2%;
+  }
+  .remainder {
+    width: 7.67%;
+  }
+  .priceWithVAT {
+    width: 9.66%;
+  }
+  .order {
+    width: 9.93%;
+    input {
+      height: 20%;
+      border: 1px solid rgba(67, 81, 116, 0.4);
+      border-radius: 10px;
+    }
+  }
+  .orderPrice {
+    width: 14.9%;
+  }
+}

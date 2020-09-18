@@ -1,0 +1,42 @@
+@import "../../../../shared/styles/variables.scss";
+
+.Presentation {
+  background: $gradient-blue;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 52.2%;
+  height: 100vh;
+  .FacilityContainer {
+    height: 75%;
+    padding: 30% 18% 0 18%;
+    text-align: center;
+    color: white;
+  }
+}
+
+.Switcher {
+  padding: 0 38% 0 38%;
+  display: flex;
+  justify-content: center;
+}
+
+button[class*="switch"] {
+  padding: 0;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 0.675em;
+  height: 0.675em;
+  margin-right: 11%;
+  border-radius: 100%;
+  &:last-child {
+    margin-right: 0;
+  }
+  &[class*="on"] {
+    background: white;
+  }
+  &[class*="off"] {
+    background: rgba(255, 255, 255, 0.5);
+  }
+}

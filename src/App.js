@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import { LandingPage } from "./pages/LandingPage.js";
-import { SignIn } from "./pages/SignIn.js";
-import { ClientOffice } from "./pages/ClientOffice.js";
+import { LandingPage } from "./pages/Landing/LandingPage.js";
+import { SignIn } from "./pages/SignIn/SignIn.js";
+import { ClientOffice } from "./pages/ClientOffice/ClientOffice.js";
 
 function App() {
   return (
