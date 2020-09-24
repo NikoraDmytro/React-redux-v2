@@ -6,11 +6,16 @@ import { ClientOfficeHeader as Header } from "./components/Header/Header.js";
 import { ConfirmPanel } from "./components/MakeOrder/ConfirmOrderPanel.js";
 import { MakeOrderPanel } from "./components/MakeOrder/MakeOrderPanel.js";
 
-export const ClientOfficeContainer = () => {
+export const ClientOfficeContainer = (props) => {
   const Visibility = useState(false);
 
   const ToBuyList = useSelector((state) => state.products.ProductsToBuyList);
   const ProductsList = useSelector((state) => state.products.ProductsList);
+
+  const content =
+    props.component === "/ClientOffice"
+      ? ["FindProducts", "BulkPrices", "Filters"]
+      : ["FindProducts"];
 
   return (
     <>
@@ -20,7 +25,7 @@ export const ClientOfficeContainer = () => {
         Visibility={Visibility}
       />
       <div className="ClientOffice">
-        <Header content={["FindProducts", "BulkPrices", "Filters"]} />
+        <Header content={content} />
         <ProductsTable />
       </div>
       <MakeOrderPanel Visibility={Visibility} />

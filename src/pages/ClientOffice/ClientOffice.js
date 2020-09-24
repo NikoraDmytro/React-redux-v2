@@ -15,27 +15,34 @@ import {
 import { SideBar } from "../components/SideBar/SideBar.js";
 import { UserIcon } from "../../components/User/UserIcon/Icon.js";
 import { ClientOfficeContainer } from "./ClientOfficeContainer.js";
+import { useHistory } from "react-router-dom";
 
-export const ClientOffice = () => (
-  <Provider store={ProductsStore}>
-    <main style={{ backgroundColor: "#F1F9FF" }}>
-      <Header
-        backgroundTheme="white"
-        logoTheme="none"
-        content={
-          <>
-            <ManagerInfoTooltip styling="blue" />
-            <UserInfoTooltip styling="blue" />
-          </>
-        }
-        buttonProps={{
-          content: { src: `${Exit}`, alt: "Выйти" },
-          link: "/SignIn",
-          type: "img",
-        }}
-      />
-      <SideBar content={<UserIcon />} />
-      <ClientOfficeContainer />
-    </main>
-  </Provider>
-);
+export const ClientOffice = () => {
+  const history = useHistory();
+
+  const component = history.location.pathname;
+
+  return (
+    <Provider store={ProductsStore}>
+      <main style={{ backgroundColor: "#F1F9FF" }}>
+        <Header
+          backgroundTheme="white"
+          logoTheme="none"
+          content={
+            <>
+              <ManagerInfoTooltip styling="blue" />
+              <UserInfoTooltip styling="blue" />
+            </>
+          }
+          buttonProps={{
+            content: { src: `${Exit}`, alt: "Выйти" },
+            link: "/SignIn",
+            type: "img",
+          }}
+        />
+        <SideBar content={<UserIcon />} component={component} />
+        <ClientOfficeContainer component={component} />
+      </main>
+    </Provider>
+  );
+};

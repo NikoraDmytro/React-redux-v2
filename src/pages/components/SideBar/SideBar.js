@@ -11,11 +11,17 @@ export const SideBar = (props) => (
     <h1 className={styles.Logo}>S2</h1>
     {props.content}
 
-    <Link to="/ClientOffice" className={styles.Active}>
+    <Link
+      to="/ClientOffice"
+      className={props.component === "/ClientOffice" ? styles.Active : null}
+    >
       <img src={listOfProducts} alt="Список товаров" />
       Товары
     </Link>
-    <Link to="ClientOrders">
+    <Link
+      to="/ClientOrders"
+      className={props.component === "/ClientOrders" ? styles.Active : null}
+    >
       <img src={myOrders} alt="Мои заказы" />
       Мои Заказы
     </Link>
