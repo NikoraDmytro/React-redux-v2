@@ -1,0 +1,21 @@
+.Filters {
+  width: 62.8%;
+  height: 100%;
+  margin-left: 1.6%;
+  justify-content: flex-end;
+  .FiltersButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #bfd2e2;
+    background-color: white;
+    border-radius: 5px;
+    width: 5.5%;
+    height: 35%;
+    img {
+      height: 40%;
+      width: 40%;
+    }
+  }
+}

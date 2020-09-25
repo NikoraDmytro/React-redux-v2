@@ -1,7 +1,9 @@
 import React from "react";
+
 import { DropDown } from "../../../../components/Tooltips/DropDown/DropDown.js";
 import styles from "./Header.module.scss";
 import FindProduct from "../../../../shared/img/findProduct.png";
+import { Filters } from "../Filters/Filters.js";
 
 export const ClientOfficeHeader = (props) => {
   const content = props.content;
@@ -22,10 +24,13 @@ export const ClientOfficeHeader = (props) => {
       />
     ) : null;
 
+  const FiltersShow = () => (content.includes("Filters") ? <Filters /> : null);
+
   return (
     <header className={styles.header}>
       <FindProducts />
       <BulkPrices />
+      <FiltersShow />
     </header>
   );
 };
