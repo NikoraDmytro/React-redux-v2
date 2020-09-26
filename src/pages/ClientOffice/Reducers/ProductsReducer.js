@@ -4,6 +4,7 @@ import { AddProductByAmountAction } from "./actions/AddProductByAmount.js";
 import { createSlice } from "@reduxjs/toolkit";
 
 import { ProductsList } from "../../../components/Products/ProductsList/ProductsList.js";
+import { RestartAction } from "./actions/Restart.js";
 
 const Products = createSlice({
   name: "products",
@@ -23,9 +24,16 @@ const Products = createSlice({
     AddProductByAmount: (state, action) => {
       return AddProductByAmountAction(state, action);
     },
+    Restart: (state) => {
+      return RestartAction(state);
+    },
   },
 });
 
-export const { AddOrRemoveProduct, AddProductByAmount } = Products.actions;
+export const {
+  AddOrRemoveProduct,
+  AddProductByAmount,
+  Restart,
+} = Products.actions;
 
 export default Products.reducer;

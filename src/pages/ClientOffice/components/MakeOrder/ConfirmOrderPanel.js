@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 
-import { Restart } from "../../../../utils/functions/Restart.js";
+import { Restart } from "../../Reducers/ProductsReducer.js";
 import CloseButton from "../../../../shared/img/Close.png";
 import { ToBuyList } from "./ToBuyList/ToBuyList.js";
 
@@ -27,7 +27,7 @@ export const ConfirmPanel = (props) => {
         <button
           className="CancelButton Rounded"
           onClick={() => {
-            Restart(props.ProductsToBuyList, dispatch);
+            dispatch(Restart());
             props.Visibility[1](false);
           }}
         >
@@ -37,7 +37,7 @@ export const ConfirmPanel = (props) => {
         <button
           className="MakeOrderButton Rounded"
           onClick={() => {
-            Restart(props.ProductsToBuyList, dispatch);
+            dispatch(Restart());
             props.Visibility[1](false);
           }}
           style={margin}
