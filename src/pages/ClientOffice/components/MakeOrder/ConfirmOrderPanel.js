@@ -3,12 +3,13 @@ import { useDispatch } from "react-redux";
 
 import { Restart } from "../../Reducers/ProductsReducer.js";
 import CloseButton from "../../../../shared/img/Close.png";
-import { ToBuyList } from "./ToBuyList/ToBuyList.js";
+import { ToBuyList } from "../../../../components/Products/ToBuyList/ToBuyList.js";
 
 export const ConfirmPanel = (props) => {
   const dispatch = useDispatch();
   const margin = { marginRight: 5.5 + "%" };
 
+  if (!props.ProductsToBuyList.ProductsNumber) props.Visibility[1](false);
   if (!props.Visibility[0]) return null;
 
   return (

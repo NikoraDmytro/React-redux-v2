@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-import { Checkbox } from "./Inputs/Checkbox.js";
-import { Order } from "./Inputs/Order.js";
+import { Checkbox } from "../Inputs/Checkbox.js";
+import { Order } from "../Inputs/Order.js";
 
 export const TableTemplate = () => {
   const Products = useSelector((state) => state.products.ProductsList);

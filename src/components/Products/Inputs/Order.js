@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { OrderInputValidation } from "../../../../utils/validation/OrderInputValidation.js";
+import { OrderInputValidation } from "../../../utils/validation/OrderInputValidation.js";
 
-import { AddProductByAmount } from "../../../../pages/ClientOffice/Reducers/ProductsReducer.js";
+import { AddProductByAmount } from "../../../pages/ClientOffice/Reducers/ProductsReducer.js";
 
 export const Order = (props) => {
   const dispatch = useDispatch();

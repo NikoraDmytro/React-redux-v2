@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 
-import { AddOrRemoveProduct } from "../../../../pages/ClientOffice/Reducers/ProductsReducer.js";
+import { AddOrRemoveProduct } from "../../../pages/ClientOffice/Reducers/ProductsReducer.js";
 
 export const Checkbox = (props) => {
   const dispatch = useDispatch();

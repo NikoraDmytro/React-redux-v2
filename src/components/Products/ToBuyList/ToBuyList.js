@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "./ToBuyList.module.scss";
 
+import { Checkbox } from "../Inputs/Checkbox.js";
+import { MassCheckbox } from "../Inputs/MassCheckbox.js";
+
 export const ToBuyList = (props) => {
   const ProductsNumber = props.ToBuyList.ProductsNumber;
   const ProductsPrice = props.ToBuyList.ProductsPrice;
@@ -13,6 +16,9 @@ export const ToBuyList = (props) => {
       const name = product.tooltip.props.content;
       return (
         <tr key={product.vendoraCode}>
+          <td>
+            <Checkbox product={product} />
+          </td>
           <td>{name}</td>
           <td>{product.order}</td>
           <td>{product.orderPrice + "грн"}</td>
@@ -28,6 +34,9 @@ export const ToBuyList = (props) => {
       <table className={styles.ToBuyList}>
         <thead>
           <tr key="head">
+            <th>
+              <MassCheckbox products={Products} />
+            </th>
             <th>Название</th>
             <th>Количество</th>
             <th>Сумма заказа</th>

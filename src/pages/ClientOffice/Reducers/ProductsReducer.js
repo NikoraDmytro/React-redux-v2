@@ -15,6 +15,7 @@ const Products = createSlice({
       ProductsNumber: 0,
       ProductsPrice: 0,
     },
+    ClientOrders: [],
   },
   reducers: {
     AddOrRemoveProduct: (state, action) => {
