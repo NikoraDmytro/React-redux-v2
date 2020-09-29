@@ -1,4 +1,4 @@
-export const RestartProductsState = (state) => {
+export const RestartProductsState = (state, action) => {
   const Products = state.ProductsList;
   const ToBuyList = state.ProductsToBuyList;
 
@@ -6,11 +6,11 @@ export const RestartProductsState = (state) => {
 
   for (const Id of ToBuyList.Ids) {
     const Product = Products[Id];
+    const ProductOrder = action ? 0 : Product.order;
 
     RestartedProductsList[Id] = Object.assign({}, Product, {
       order: 0,
-      remainder:
-        Number(Product.order) + Number(Product.remainder.slice(0, -2)) + "шт",
+      remainder: ProductOrder + Number(Product.remainder.slice(0, -2)) + "шт",
       orderPrice: "",
     });
   }

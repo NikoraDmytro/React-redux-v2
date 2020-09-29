@@ -1,13 +1,17 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 
-import { Restart } from "../../Reducers/ProductsReducer.js";
+import { AddNewOrder, Restart } from "../../Reducers/ProductsReducer.js";
 import CloseButton from "../../../../shared/img/Close.png";
 import { ToBuyList } from "../../../../components/Products/ToBuyList/ToBuyList.js";
 
 export const ConfirmPanel = (props) => {
   const dispatch = useDispatch();
   const margin = { marginRight: 5.5 + "%" };
+
+  const Products = {};
+  for (const Id of props.ProductsToBuyList.Ids)
+    Products[Id] = props.ProductsList[Id];
 
   if (!props.ProductsToBuyList.ProductsNumber) props.Visibility[1](false);
   if (!props.Visibility[0]) return null;
@@ -38,7 +42,8 @@ export const ConfirmPanel = (props) => {
         <button
           className="MakeOrderButton Rounded"
           onClick={() => {
-            dispatch(Restart());
+            dispatch(AddNewOrder(Products));
+            dispatch(Restart("Order"));
             props.Visibility[1](false);
           }}
           style={margin}

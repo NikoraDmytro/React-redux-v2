@@ -1,6 +1,6 @@
 import { RestartProductsState } from "../../../../utils/functions/RestartProductsState";
 
-export const RestartAction = (state) => {
+export const RestartAction = (state, action) => {
   const Products = state.ProductsList;
   const ProductsToBuyList = state.ProductsToBuyList;
 
@@ -11,5 +11,5 @@ export const RestartAction = (state) => {
     Input.value = "";
   }
 
-  return RestartProductsState(state);
+  return RestartProductsState(state, action);
 };
