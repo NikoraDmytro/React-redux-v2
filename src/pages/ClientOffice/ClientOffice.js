@@ -1,6 +1,4 @@
 import React from "react";
-import { Provider } from "react-redux";
-import ProductsStore from "./stores/ProductsStore.js";
 
 import Exit from "../../shared/img/exit.png";
 
@@ -23,26 +21,24 @@ export const ClientOffice = () => {
   const component = history.location.pathname;
 
   return (
-    <Provider store={ProductsStore}>
-      <main style={{ backgroundColor: "#F1F9FF" }}>
-        <Header
-          backgroundTheme="white"
-          logoTheme="none"
-          content={
-            <>
-              <ManagerInfoTooltip styling="blue" />
-              <UserInfoTooltip styling="blue" />
-            </>
-          }
-          buttonProps={{
-            content: { src: `${Exit}`, alt: "Выйти" },
-            link: "/SignIn",
-            type: "img",
-          }}
-        />
-        <SideBar content={<UserIcon />} component={component} />
-        <ClientOfficeContainer component={component} />
-      </main>
-    </Provider>
+    <main style={{ backgroundColor: "#F1F9FF" }}>
+      <Header
+        backgroundTheme="white"
+        logoTheme="none"
+        content={
+          <>
+            <ManagerInfoTooltip styling="blue" />
+            <UserInfoTooltip styling="blue" />
+          </>
+        }
+        buttonProps={{
+          content: { src: `${Exit}`, alt: "Выйти" },
+          link: "/SignIn",
+          type: "img",
+        }}
+      />
+      <SideBar content={<UserIcon />} component={component} />
+      <ClientOfficeContainer component={component} />
+    </main>
   );
 };

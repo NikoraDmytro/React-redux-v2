@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import productsReducer from "../Reducers/ProductsReducer.js";
+import productsReducer from "../pages/ClientOffice/Reducers/ProductsReducer.js";
 
 export default configureStore({
   reducer: {
