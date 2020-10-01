@@ -1,3 +1,19 @@
+@import "../../../shared/styles/variables.scss";
+
+.OrderDate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a7cbed;
+  box-shadow: $button-shadow;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+  height: 4vh;
+  width: 20%;
+}
+
 .ClientOffice table {
   height: 81%;
   width: 100%;
@@ -7,6 +23,9 @@
     line-height: 16px;
     border-bottom: 1px solid #e5ecff;
     text-align: center;
+    &.MakeOrderAgain {
+      border: none;
+    }
   }
   th {
     height: 7vh;
@@ -19,6 +38,15 @@
     font-weight: normal;
     font-size: 11px;
     color: #2f3648;
+    input {
+      height: 20%;
+      border: 1px solid rgba(67, 81, 116, 0.4);
+      border-radius: 10px;
+    }
+  }
+  .Notification {
+    left: 35%;
+    position: absolute;
   }
   .checkbox {
     width: 5.5%;
@@ -46,11 +74,6 @@
   }
   .order {
     width: 9.93%;
-    input {
-      height: 20%;
-      border: 1px solid rgba(67, 81, 116, 0.4);
-      border-radius: 10px;
-    }
   }
   .orderPrice {
     width: 14.9%;

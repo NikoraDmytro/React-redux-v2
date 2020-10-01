@@ -12,7 +12,7 @@ export const ClientOfficeContainer = (props) => {
   const ToBuyList = useSelector((state) => state.products.ProductsToBuyList);
   const ProductsList = useSelector((state) => state.products.ProductsList);
 
-  const content =
+  const HeaderContent =
     props.component === "/ClientOffice"
       ? ["FindProducts", "BulkPrices", "Filters"]
       : ["FindProducts"];
@@ -25,10 +25,21 @@ export const ClientOfficeContainer = (props) => {
         Visibility={Visibility}
       />
       <div className="ClientOffice">
-        <Header content={content} />
-        <ProductsTable />
+        <Header content={HeaderContent} />
+        <ProductsTable component={props.component} />
       </div>
-      <MakeOrderPanel Visibility={Visibility} />
+
+      {Number(ToBuyList.ProductsNumber) &&
+      props.component === "/ClientOffice" ? (
+        <MakeOrderPanel
+          type="Global"
+          Number={ToBuyList.ProductsNumber}
+          Price={ToBuyList.ProductsPrice}
+          onClick={() => Visibility[1](true)}
+        >
+          Заказать
+        </MakeOrderPanel>
+      ) : null}
     </>
   );
 };

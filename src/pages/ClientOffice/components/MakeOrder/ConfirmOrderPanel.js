@@ -9,6 +9,9 @@ export const ConfirmPanel = (props) => {
   const dispatch = useDispatch();
   const margin = { marginRight: 5.5 + "%" };
 
+  const Number = props.ProductsToBuyList.ProductsNumber;
+  const Price = props.ProductsToBuyList.ProductsPrice;
+
   const Products = {};
   for (const Id of props.ProductsToBuyList.Ids)
     Products[Id] = props.ProductsList[Id];
@@ -42,7 +45,7 @@ export const ConfirmPanel = (props) => {
         <button
           className="MakeOrderButton Rounded"
           onClick={() => {
-            dispatch(AddNewOrder(Products));
+            dispatch(AddNewOrder([Products, Number, Price]));
             dispatch(Restart("Order"));
             props.Visibility[1](false);
           }}

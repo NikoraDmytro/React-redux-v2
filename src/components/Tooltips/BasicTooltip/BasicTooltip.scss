@@ -1,16 +1,23 @@
+.Tooltip {
+  position: relative;
+}
+
 .TooltipText {
   position: absolute;
+  right: 0;
   background: #ffffff;
-  width: 25%;
+  z-index: 4;
+  width: 150%;
   height: fit-content;
   box-shadow: 2px 2px 4px rgba(26, 63, 156, 0.2),
     0px -2px 2px rgba(26, 63, 156, 0.2);
   border-radius: 10px;
-  padding: 1% 1.1% 1% 1.1%;
+  padding: 10% 11% 10% 11%;
 }
 
 .helpIcon {
   width: 9.2%;
   height: 9.2%;
+
   float: right;
 }

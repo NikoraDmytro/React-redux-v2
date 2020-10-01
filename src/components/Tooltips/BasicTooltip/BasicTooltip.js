@@ -8,14 +8,13 @@ export const Tooltip = (props) => {
   const [IsVisible, setIsVisible] = useState(false);
 
   return (
-    <div className={props.className}>
+    <div className={`Tooltip ${props.className}`}>
       {props.content}
       <img
         src={Info}
         alt="Info"
         className="helpIcon"
-        onMouseOver={() => setIsVisible(true)}
-        onMouseOut={() => setIsVisible(false)}
+        onMouseOver={() => setIsVisible(!IsVisible)}
       />
       {IsVisible ? (
         <div className="TooltipText">{props.TooltipText}</div>
